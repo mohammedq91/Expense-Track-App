@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+
+  <body>
+    <div class="head">
+      <h2>Simple Expense Tracker App</h2>
+    </div>
+
+    <div class="contaner">
+      <div class="other">
+        <h3>Add a new item:</h3>
+        <div class="form-group">
+          <label for="payment method"> <strong>Type:  </strong></label>
+          <select id = "payment method">
+            <option value="card">Card</option>
+            <option value="cash">Cash</option>
+            <option value="cryptocoin">Cryptocoin</option>
+            <option value="other">Other</option>
+          </select> 
+        </div> 
+      </div>  <br><br>
+
+      <div class="form-input">
+        <form>
+          <label for="item name"><strong>Name: </strong></label>
+          <input id = "item name" type="text" placeholder="What did you spend on?">
+        </form> 
+      </div> <br><br>
+
+      <div class="form-date">
+        <label for="date"> <strong>Date: </strong></label>
+        <input  id="date"  type="date">
+      </div> <br><br>
+
+      <div class="form-amount">
+        <label for="amount"> <strong>Amount: </strong></label>
+        <input id="amount" type="number" >
+      </div> <br><br>
+    
+    <div>
+    <button id="button">add a new expense</button>
+    </div>
+    <script src="script.js"></script>
+  </body> <br><br>
+
+  <table>
+    <thead>
+        <tr>
+          <th>type</th>
+          <th>name</th>
+          <th>date</th>
+          <th>amount</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>type</th>
+        <th>name</th>
+        <th>date</th>
+        <th>amount</th>
+      </tr>
+    </tbody>
+  </table>
+</html>
