@@ -18,7 +18,7 @@
       <div class="other">
         <h3>Add a new item:</h3>
         <div class="form-group">
-          <label for="payment method"> <strong>Type:  </strong></label>
+          <label for="payment-method"> <strong>Type:  </strong></label>
           <select id = "payment method">
             <option value="card">Card</option>
             <option value="cash">Cash</option>
@@ -48,25 +48,26 @@
     <div>
     <button id="button">add a new expense</button>
     </div>
+
+    <table>
+      <thead>
+          <tr>
+            <th>type</th>
+            <th>name</th>
+            <th>date</th>
+            <th>amount</th>
+          </tr>
+      </thead>
+      <tbody id='tbody'>
+
+      </tbody>
+   
+    </table>
+
     <script src="script.js"></script>
+
+
   </body> <br><br>
 
-  <table>
-    <thead>
-        <tr>
-          <th>type</th>
-          <th>name</th>
-          <th>date</th>
-          <th>amount</th>
-        </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>type</th>
-        <th>name</th>
-        <th>date</th>
-        <th>amount</th>
-      </tr>
-    </tbody>
-  </table>
+  
 </html>

@@ -1,9 +1,19 @@
-//var paymentMethod = getElementById("payment method").addEventListener('click', add)
-//var itemName =getElementById("item name").addEventListener('click',add)
-//var date = getElementById("date").addEventListener('click', add)
-//var amount = getElementById("amount").addEventListener('click', add)
-const addNewExpense = getElementById("button").addEventListener('click',add )
+var paymentMethod = document.getElementById("payment-method")
+// var itemName =getElementById("item name")
+// var date = getElementById("date")
+// var amount = getElementById("amount")
+const addNewExpense = document.getElementById("button").addEventListener('click', add)
 
 function add(){
+  const tableBody = document.getElementById('tbody')
+  const tableRow = document.createElement('tr')
+  tableBody.appendChild(tableRow);
 
-}
+  const typeCell = document.createElement('td')
+  typeCell.textContent = paymentMethod.value;
+
+  tableRow.appendChild(typeCell)
+  console.log(paymentMethod.value)
+  
+
+}   
