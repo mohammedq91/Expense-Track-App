@@ -19,7 +19,7 @@
         <h3>Add a new item:</h3>
         <div class="form-group">
           <label for="payment-method"> <strong>Type:  </strong></label>
-          <select id = "payment method">
+          <select id = "payment-method">
             <option value="card">Card</option>
             <option value="cash">Cash</option>
             <option value="cryptocoin">Cryptocoin</option>
@@ -30,8 +30,8 @@
 
       <div class="form-input">
         <form>
-          <label for="item name"><strong>Name: </strong></label>
-          <input id = "item name" type="text" placeholder="What did you spend on?">
+          <label for="item-name"><strong>Name: </strong></label>
+          <input id = "item-name" type="text" placeholder="What did you spend on?">
         </form> 
       </div> <br><br>
 
@@ -47,10 +47,10 @@
     
     <div>
     <button id="button">add a new expense</button>
-    </div>
+    </div> <br> <br>
 
-    <table>
-      <thead>
+    <table class= "table">
+      <thead class ="header">
           <tr>
             <th>type</th>
             <th>name</th>
