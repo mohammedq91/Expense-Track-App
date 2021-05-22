@@ -2,7 +2,14 @@ const paymentMethod = document.getElementById("payment-method")
 const itemName = document.getElementById("item-name")
 const date = document.getElementById("date")
 const amount = document.getElementById("amount")
-const deleteitem = document.getElementById('button')
+
+function deleteRow(deleteItem){
+  //deleteItem.remove()
+  //tableRow.removeChild(deleteItem)
+  console.log('deleteItem.parentElement:', deleteItem.parentElement);
+
+
+}
 
 const addNewExpenseButton = document
   .getElementById("button")
@@ -41,12 +48,16 @@ function add(tr){
 
   const deleteItem = document.createElement('button')
   deleteItem.textContent = "delete"
+  deleteItem.addEventListener('click',deleteRow)
+
+
   tableRow.appendChild(deleteItem)
 
   itemName.value = ""
   date.value= ""
   amount.value = ""
 };
+
 
 
 
