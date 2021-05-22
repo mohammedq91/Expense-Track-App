@@ -3,13 +3,6 @@ const itemName = document.getElementById("item-name")
 const date = document.getElementById("date")
 const amount = document.getElementById("amount")
 
-function deleteRow(deleteItem){
-  //deleteItem.remove()
-  //tableRow.removeChild(deleteItem)
-  console.log('deleteItem.parentElement:', deleteItem.parentElement);
-
-
-}
 
 const addNewExpenseButton = document
   .getElementById("button")
@@ -48,7 +41,9 @@ function add(tr){
 
   const deleteItem = document.createElement('button')
   deleteItem.textContent = "delete"
-  deleteItem.addEventListener('click',deleteRow)
+  deleteItem.addEventListener('click', ()=> {
+    deleteRow(deleteItem);
+  });
 
 
   tableRow.appendChild(deleteItem)
@@ -58,6 +53,9 @@ function add(tr){
   amount.value = ""
 };
 
+function deleteRow(deleteItem){
+  deleteItem.parentElement.remove();
+}
 
 
 
