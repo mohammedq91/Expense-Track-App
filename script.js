@@ -2,6 +2,7 @@ const paymentMethod = document.getElementById("payment-method")
 const itemName = document.getElementById("item-name")
 const date = document.getElementById("date")
 const amount = document.getElementById("amount")
+const deleteitem = document.getElementById('button')
 
 const addNewExpenseButton = document
   .getElementById("button")
@@ -9,10 +10,9 @@ const addNewExpenseButton = document
     if (!paymentMethod.value || 
       !itemName.value || 
       !date.value || 
-      !amount.value.value 
+      !amount.value
     ){
-      //alert("Please fill out all fields!")
-      console.log('You clicked me!')
+      alert("Please fill out all fields!")
     } else {
       add(paymentMethod,itemName, date, amount);
     }
@@ -38,6 +38,10 @@ function add(tr){
   const amountCell = document.createElement('td');
   amountCell.textContent = amount.value;
   tableRow.appendChild(amountCell)
+
+  const deleteItem = document.createElement('button')
+  deleteItem.textContent = "delete"
+  tableRow.appendChild(deleteItem)
 
   itemName.value = ""
   date.value= ""
