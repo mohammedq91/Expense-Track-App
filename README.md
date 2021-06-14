@@ -1,6 +1,6 @@
-# Vanilla JavaScript Expense-Track-App 
+# Vanilla JavaScript Expense-Tracker-App 
 
-#### A simple Expense-Track-App game written entirely in Javascript, HTML, and CSS.
+#### A simple Expense-Tracker-App game written entirely in Javascript, HTML, and CSS.
 
 #### Play it [here](https://mohammedq91.github.io/Expense-Track-App/)
 
