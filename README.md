@@ -2,7 +2,7 @@
 
 #### A simple Expense-Tracker-App game written entirely in Javascript, HTML, and CSS.
 
-#### Play it [here](https://mohammedq91.github.io/Expense-Track-App/)
+#### Play it [here](https://mohammedq91.github.io/Expense-Tracker-App/)
 
 ![](ExpenseTrackerPhoto.png)
 
