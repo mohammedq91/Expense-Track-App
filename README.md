@@ -2,9 +2,9 @@
 
 #### A simple Expense-Track-App game written entirely in Javascript, HTML, and CSS.
 
-#### Play it [here](https://mohammedq91.github.io/rock-paper-scissors/)
+#### Play it [here](https://mohammedq91.github.io/Expense-Track-App/)
 
-![](RockPaperScissorsPhoto.png)
+![](ExpenseTrackerPhoto.png)
 
 ## Summary
 
