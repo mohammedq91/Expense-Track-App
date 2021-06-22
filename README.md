@@ -7,10 +7,7 @@
 ![](ExpenseTrackerPhoto.png)
 
 ## Summary
-
-This project helped me further to grasp my understanding of JavaScript fundamentals. Also, I learned how to return an element from a list.
-
-
+This project was written in HTML, JavaScript, and CSS. The purpose of this app was to help me to reinforce my JavaScript skills. I learned how to implement separation of concerns for functions, pass constants/variables into functions, add new table body/row/dataCell, add textContent property, add/remove parent/child element property, and add remove method.
 
 ## Author
 
