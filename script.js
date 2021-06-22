@@ -1,61 +1,64 @@
-const paymentMethod = document.getElementById("payment-method")
-const itemName = document.getElementById("item-name")
-const date = document.getElementById("date")
-const amount = document.getElementById("amount")
+document.getElementById("add-expense-button")
+  .addEventListener('click', displayExpense);
 
+function displayExpense(){
+  const paymentMethod = document.getElementById("payment-method")
+  const itemName = document.getElementById("item-name")
+  const date = document.getElementById("date")
+  const amount = document.getElementById("amount")
 
-const addNewExpenseButton = document
-  .getElementById("button")
-  .addEventListener('click', () => {
-    if (!paymentMethod.value || 
-      !itemName.value || 
-      !date.value || 
-      !amount.value
-    ){
-      alert("Please fill out all fields!")
-    } else {
-      add(paymentMethod,itemName, date, amount);
-    }
-  });
+  if (isEmpty(paymentMethod) || isEmpty(itemName) || isEmpty(date) || isEmpty(amount)){
+    alert("Please fill out all fields!")
+  } else {
+    const tableBody = document.getElementById('tbody');
+    const expenseTableRow = createExpenseRow(paymentMethod,itemName, date, amount);
+    tableBody.appendChild(expenseTableRow)
 
-function add(tr){
-  const tableBody = document.getElementById('tbody');
-  const tableRow = document.createElement('tr');
-  tableBody.appendChild(tableRow)
-
-  const typeCell = document.createElement('td');
-  typeCell.textContent = paymentMethod.value;
-  tableRow.appendChild(typeCell)
-    
-  const nameCell = document.createElement('td');
-  nameCell.textContent = itemName.value;
-  tableRow.appendChild(nameCell)
-
-  const dateCell = document.createElement('td');
-  dateCell.textContent = date.value;
-  tableRow.appendChild(dateCell)
-
-  const amountCell = document.createElement('td');
-  amountCell.textContent = amount.value;
-  tableRow.appendChild(amountCell)
-
-  const deleteItem = document.createElement('button')
-  deleteItem.textContent = "delete"
-  deleteItem.addEventListener('click', ()=> {
-    deleteRow(deleteItem);
-  });
-
-
-  tableRow.appendChild(deleteItem)
-
-  itemName.value = ""
-  date.value= ""
-  amount.value = ""
-};
-
-function deleteRow(deleteItem){
-  deleteItem.parentElement.remove();
+    clearInput(itemName);
+    clearInput(date);
+    clearInput(amount);
+  }
 }
 
+function isEmpty(input){
+  return !input.value;
+}
 
+function createExpenseRow(paymentMethod,itemName, date, amount){
+  const tableRow = document.createElement('tr');
+  const typeCell = createTableData(paymentMethod);
+  const nameCell = createTableData(itemName);
+  const dateCell = createTableData(date);
+  const amountCell = createTableData(amount);
+  const deleteButton = createDeleteButton(tableRow)
+
+  tableRow.appendChild(typeCell)
+  tableRow.appendChild(nameCell)
+  tableRow.appendChild(dateCell)
+  tableRow.appendChild(amountCell)
+  tableRow.appendChild(deleteButton)
+
+  return tableRow;
+};
+
+function createTableData(input){
+  const tableData = document.createElement('td');
+  tableData.textContent = input.value;
+
+  return tableData;
+}
+
+function createDeleteButton(tableRow){
+  const deleteButton = document.createElement('button')
+  deleteButton.textContent = "delete"
+  deleteButton.addEventListener('click', ()=> {
+    tableRow.remove();
+  });
+
+  return deleteButton;
+}
+
+function clearInput(input){
+  input.value = '';
+}
 
