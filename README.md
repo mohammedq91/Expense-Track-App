@@ -7,7 +7,7 @@
 ![](ExpenseTrackerPhoto.png)
 
 ## Summary
-This project was written in HTML, JavaScript, and CSS. The purpose of this app was to help me to reinforce my JavaScript skills. I learned how to implement separation of concerns for functions, pass constants/variables into functions, add new table body/row/dataCell, add textContent property, add/remove parent/child element property, and add remove method.
+Expense tracker was developed to further reinforce my understanding of building front end website, and functionality was the main focus during development. Tools used: HTML, JavaScript, and CSS were used. I learned how to implement separation of concerns for functions, pass constants/variables into functions, add new table body/row/dataCell, add textContent property, add/remove parent/child element property, and add remove method.
 
 ## Author
 
